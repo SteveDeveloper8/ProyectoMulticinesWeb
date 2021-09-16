@@ -26,6 +26,8 @@
     <script src="http://localhost/ProyectoMulticinesWeb/assets/js/validaciones.js"></script>
     <script src="http://localhost/ProyectoMulticinesWeb/assets/js/validacionesTCN.js"></script>
     <script src="http://localhost/ProyectoMulticinesWeb/assets/js/ValidarFormulario.js"></script>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
     <script
       src="https://kit.fontawesome.com/6faef096ec.js"
       crossorigin="anonymous"
@@ -67,16 +69,16 @@
         </div>
         <div class="header-Botones">
           <a id="registro" href="http://localhost/ProyectoMulticinesWeb/views/estaticas/registrate.php">Registrate</a>
-          <a id="inicioSesion" href="#">Iniciar Sesión</a>
+          <a id="inicioSesion" href="http://localhost/ProyectoMulticinesWeb/index.php?c=sesion&a=entrar">Iniciar Sesión</a>
         </div>
       </div>
       <div class="header-principal">
         <div class="logo">
-          <a href="../homeView.php"><img src="http://localhost/ProyectoMulticinesWeb/assets/img/logo.png" alt="logo" /></a>
+          <a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/homeView.php"><img src="http://localhost/ProyectoMulticinesWeb/assets/img/logo.png" alt="logo" /></a>
         </div>
         <nav class="navegacion">
           <ul>
-            <li><a href="../homeView.php">Inicio</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/views/homeView.php">Inicio</a></li>
             <!-- TODO: Asanza -->
             <li><a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/Cartelera.php">Cartelera</a></li>
             <!-- TODO: Lopez -->

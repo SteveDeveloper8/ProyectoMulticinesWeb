@@ -1,7 +1,7 @@
 <!-- incluimos  Encabezado -->
 <?php require_once 'views/partials/encabezado.php'; ?>
 
-<div class="container">
+<div class="container" style="margin-top: 200px;">
     
     <div class="card card-body">
         <form action="index.php?c=login&a=autenticar" method="POST" name="formLogin" id="formLogin">
