@@ -1,4 +1,4 @@
-<?php require_once '../partials/encabezado.php'; ?>
+<?php require_once 'views/partials/encabezado.php'; ?>
   <div class="tituloCartelera">
     <h1 style="text-align: center">CARTELERA MULTICINES</h1>
     <p>Tu mejor eleccion en experiencia cinematografica</p>
@@ -1285,4 +1285,4 @@
       </div>
     </div>
   </section>
-  <?php require_once 'partials/footer.php';
+  <?php require_once 'views/partials/footer.php';

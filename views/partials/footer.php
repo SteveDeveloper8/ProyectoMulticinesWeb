@@ -5,11 +5,11 @@
             <strong><span class="borde">Contáctanos</span></strong>
           </p>
 
-          <a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/contactenos.php">Escríbenos</a>
+          <a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=contactenos&a=estaticas">Escríbenos</a>
           <br />
-          <a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/QuienesSomos.php">Quienes somos</a>
+          <a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=QuienesSomos&a=estaticas">Quienes somos</a>
           <br />
-          <a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/TrabajaConNosotros.php">Trabaja con nosotros</a>
+          <a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=TrabajaConNosotros&a=estaticas">Trabaja con nosotros</a>
           <br />
           <a href="#">Donde estámos</a>
         </div>

@@ -1,4 +1,4 @@
-<?php require_once '../partials/encabezado.php'; ?>
+<?php require_once 'views/partials/encabezado.php'; ?>
   <div class="cabecera">
     <h1>PROMOCIONES</h1>
     <p>INICIO-PROMOCIONES</p>
@@ -59,4 +59,4 @@
       <a class="enlace-boton" href="#">VER MÁS</a>
     </div>
   </div>
-  <?php require_once '../partials/footer.php';
+  <?php require_once 'views/partials/footer.php';

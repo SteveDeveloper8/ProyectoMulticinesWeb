@@ -1,4 +1,4 @@
-<?php require_once '../partials/encabezado.php'; ?>
+<?php require_once 'views/partials/encabezado.php'; ?>
     <div class="snack-bar">
       <div class="bar-menu">
         <div id="combos" onclick="cambiarSeccion(this);">
@@ -149,4 +149,4 @@
         </div>
       </div>
     </div>
-<?php require_once '../partials/footer.php';
+<?php require_once 'views/partials/footer.php';

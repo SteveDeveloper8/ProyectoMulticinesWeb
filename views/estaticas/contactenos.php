@@ -1,4 +1,4 @@
-<?php require_once '../partials/encabezado.php'; ?>
+<?php require_once 'views/partials/encabezado.php'; ?>
   <div class="cabecera">
     <h1>CONTÁCTANOS</h1>
     <p>INICIO-CONTÁCTANOS</p>
@@ -121,4 +121,4 @@
     </div>
   </div>
 
-  <?php require_once '../partials/footer.php';
+  <?php require_once 'views/partials/footer.php';

@@ -1,7 +1,7 @@
-<?php require_once '../partials/encabezado.php'; ?>
+<?php require_once 'views/partials/encabezado.php'; ?>
     <section id="formulario">
       <h1>Registro de usuario</h1>
-      <form onsubmit="return validar()" class="body-formulario">
+      <form onsubmit="return validar()" class="body-formulario" action="index.php?c=sesion&a=registrar">
         <div id="titulo">
           <h3>Datos Personales</h3>
         </div>
@@ -125,4 +125,4 @@
 
     <script  src="http://localhost/ProyectoMulticinesWeb/assets/js/validarFormulario.js"></script>
 
-    <?php require_once '../partials/footer.php';
+    <?php require_once 'views/partials/footer.php';

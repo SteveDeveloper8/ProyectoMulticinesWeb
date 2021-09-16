@@ -68,7 +68,7 @@
           </a>
         </div>
         <div class="header-Botones">
-          <a id="registro" href="http://localhost/ProyectoMulticinesWeb/views/estaticas/registrate.php">Registrate</a>
+          <a id="registro" href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=registrate&a=estaticas">Registrate</a>
           <a id="inicioSesion" href="http://localhost/ProyectoMulticinesWeb/index.php?c=sesion&a=entrar">Iniciar Sesión</a>
         </div>
       </div>
@@ -80,15 +80,15 @@
           <ul>
             <li><a href="http://localhost/ProyectoMulticinesWeb/views/homeView.php">Inicio</a></li>
             <!-- TODO: Asanza -->
-            <li><a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/Cartelera.php">Cartelera</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=Cartelera&a=estaticas">Cartelera</a></li>
             <!-- TODO: Lopez -->
-            <li><a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/SnackBar.php">Snackbar</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=Snackbar&a=estaticas">Snackbar</a></li>
             <!-- TODO: Asanza -->
-            <li><a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/promociones.php">Promociones</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=promociones&a=estaticas">Promociones</a></li>
             <!-- TODO: Martinez -->
-            <li><a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/QuienesSomos.php">Quienes somos</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=QuienesSomos&a=estaticas">Quienes somos</a></li>
             <!-- TODO: Lopez -->
-            <li><a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/contactenos.php">Contáctanos</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=contactenos&a=estaticas">Contáctanos</a></li>
             <!-- TODO: Martinez -->
             <!-- TODO: Delgado Registro ** Trabaja con nosotros-->
           </ul>

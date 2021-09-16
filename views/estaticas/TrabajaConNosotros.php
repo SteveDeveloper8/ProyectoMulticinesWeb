@@ -1,4 +1,4 @@
-<?php require_once '../partials/encabezado.php'; ?>  
+<?php require_once 'views/partials/encabezado.php'; ?>  
   <div class="formularios">
     <!-- onsubmit=return validar() PERMITE LLAMAR A LA FUNCION DE JAVASCRIPT QUE VALIDA EL FORMULARIO-->
     <form id="formulario" name="formulario" onsubmit="return validar();">
@@ -87,4 +87,4 @@
     </form>
 
 </div>
-<?php require_once '../partials/footer.php';
+<?php require_once 'views/partials/footer.php';
