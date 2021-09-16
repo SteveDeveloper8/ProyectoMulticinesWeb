@@ -1,6 +1,6 @@
 function seleccionarDia(encabezado)
 {
-    limpiarMenu();
+    limpiarMenus();
     encabezado.style.backgroundColor="rgb(35, 153, 207)";
     limpiarSeleccion();
     diaSeleccionado(encabezado.id);
@@ -19,7 +19,7 @@ function limpiarSeleccion()
         element.style.visibility="hidden";
     });
 }
-function limpiarMenu()
+function limpiarMenus()
 {
     var encabezados=document.querySelectorAll(".semana div");
     encabezados.forEach(element => {

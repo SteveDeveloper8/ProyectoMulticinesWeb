@@ -1,8 +1,8 @@
 function seleccionLugar(encabezado)
 {
-    limpiarMenu();
+    limpiarMenus2();
     encabezado.style.backgroundColor="rgb(35, 153, 207)";
-    limpiarSeleccion();
+    limpiarSeleccion2();
     lugarSeleccionado(encabezado.id);
 }
 function lugarSeleccionado(id)
@@ -11,7 +11,7 @@ function lugarSeleccionado(id)
     seccion.style.display="flex";
     seccion.style.visibility="visible";
 }
-function limpiarSeleccion()
+function limpiarSeleccion2()
 {
     var secciones=document.querySelectorAll(".seleccionLugar")
     secciones.forEach(element => {
@@ -19,7 +19,7 @@ function limpiarSeleccion()
         element.style.visibility="hidden";
     });
 }
-function limpiarMenu()
+function limpiarMenus2()
 {
     var encabezados=document.querySelectorAll(".Locaciones div");
     encabezados.forEach(element => {
