@@ -17,7 +17,7 @@
       content="Aplicacion de cine,proyecto segundo parcial, sexto semestre"
     />
     
-    <link rel="stylesheet" href="../../assets/css/estilos.css" />
+    <link rel="stylesheet" href="http://localhost/ProyectoMulticinesWeb/assets/css/estilos.css" />
     <script src="http://localhost/ProyectoMulticinesWeb/assets/js/Quienes.js"></script>
     <script src="http://localhost/ProyectoMulticinesWeb/assets/js/Cartelera.js"></script>
     <script src="http://localhost/ProyectoMulticinesWeb/assets/js/codigo.js"></script>
@@ -66,7 +66,7 @@
           </a>
         </div>
         <div class="header-Botones">
-          <a id="registro" href="html/registrate.html">Registrate</a>
+          <a id="registro" href="http://localhost/ProyectoMulticinesWeb/views/estaticas/registrate.php">Registrate</a>
           <a id="inicioSesion" href="#">Iniciar Sesión</a>
         </div>
       </div>
@@ -78,15 +78,15 @@
           <ul>
             <li><a href="../homeView.php">Inicio</a></li>
             <!-- TODO: Asanza -->
-            <li><a href="estaticas/Cartelera.php">Cartelera</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/Cartelera.php">Cartelera</a></li>
             <!-- TODO: Lopez -->
-            <li><a href="estaticas/SnackBar.php">Snackbar</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/SnackBar.php">Snackbar</a></li>
             <!-- TODO: Asanza -->
-            <li><a href="estaticas/promociones.php">Promociones</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/promociones.php">Promociones</a></li>
             <!-- TODO: Martinez -->
             <li><a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/QuienesSomos.php">Quienes somos</a></li>
             <!-- TODO: Lopez -->
-            <li><a href="estaticas/contactenos.php">Contáctanos</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/views/estaticas/contactenos.php">Contáctanos</a></li>
             <!-- TODO: Martinez -->
             <!-- TODO: Delgado Registro ** Trabaja con nosotros-->
           </ul>
