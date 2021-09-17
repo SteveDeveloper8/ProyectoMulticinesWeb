@@ -12,5 +12,10 @@ class IndexController {
         require_once 'views/estaticas/'.$page.'.php';
         
     }
+    public function pelicula(){
+        $page =  $_GET['p'];
+        require_once 'views/Pelicula/'.$page.'.php';
+        
+    }
     
 }

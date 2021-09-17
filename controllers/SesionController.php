@@ -9,9 +9,11 @@ class SesionController
     public function entrar(){
         require_once "views/login/login.php";//llamar a la vista
     }
+
     public function registrar(){
         // leer parametros
-        $nom = htmlentities($_POST['nombre']);
+      
+        $nom = htmlentities($_POST['nombres']);
         $ape = htmlentities($_POST['apellidos']);
         $ced = htmlentities($_POST['cedula']);
         $email = htmlentities($_POST['email']);
@@ -19,11 +21,11 @@ class SesionController
         $telf = htmlentities($_POST['telefono']);
         $dom = htmlentities($_POST['domicilio']);
         $fecha = htmlentities($_POST['fechaNac']);
-      
         //if(!isset($_POST['codigo'])){ header('');}
         
         //llamar al modelo
-        $exito = $this->model->insertar($nom, $ape, $ced, $email, $cont, $telf, $dom, $fecha;
+        $exito = $this->model->insertar($nom, $ape, $ced, $email, $cont, $telf, $dom, $fecha);
+       
         $msj = 'usuario guardado exitosamente';
         $color = 'primary';
         if (!$exito) {
@@ -37,4 +39,6 @@ class SesionController
         //llamar a la vista
         header('Location:index.php?c=homeView&a=index');
     }
+
+    
 }

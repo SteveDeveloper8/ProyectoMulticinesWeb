@@ -1,7 +1,7 @@
 <?php require_once 'views/partials/encabezado.php'; ?>
     <section id="formulario">
       <h1>Registro de usuario</h1>
-      <form onsubmit="return validar()" class="body-formulario" action="index.php?c=sesion&a=registrar">
+      <form onsubmit="return validar()" class="body-formulario" action="index.php?c=sesion&a=registrar" method="Post">
         <div id="titulo">
           <h3>Datos Personales</h3>
         </div>

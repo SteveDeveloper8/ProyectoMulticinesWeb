@@ -10,6 +10,19 @@ class PeliculaModel {
     public function __construct() {
         $this->con = Conexion::getConexion(); // :: para acceder a funciones  static
     }
+    public function consultar(){
+        //prepare
+      $sql="select * from pelicula";
+      $sentencia = $this->con->prepare($sql);
+      //binding parameters
+      //execute
+      $sentencia->execute();
+      //retornar resultados
+      $resultados = $sentencia->fetchAll(PDO::FETCH_OBJ);
+      
+     return $resultados;
+      
+  }
 
     public function listar() { // listar todos los productos
         $sql = "select * from pelicula";
@@ -31,9 +44,9 @@ class PeliculaModel {
         // ejecutar la sentencia
         $stmt->execute($data);
         // recuperar los datos (en caso de select)
-        $producto = $stmt->fetch(PDO::FETCH_ASSOC);
+        $peli = $stmt->fetch(PDO::FETCH_ASSOC);
         // retornar resultados
-        return $producto;
+        return $peli;
     }
 
     public function buscar($parametro) {
@@ -49,10 +62,10 @@ class PeliculaModel {
         return $resultados;
     }
 
-    public function insertar($nom, $desc, $gen, $cla, $dur) {
+    public function insertar($nom, $desc, $gen, $cla, $dur, $est) {
         //prepare
-        $sql = "INSERT INTO pelicula(peli_id, peli_nombre, peli_descripcion, peli_genero, peli_clasificacion_edad, peli_duracion) VALUES 
-            (NULL, :nom, :desc, :gen, :cla, :dur)";
+        $sql = "INSERT INTO pelicula(peli_nombre, peli_descripcion, peli_genero, peli_clasificacion_edad, peli_duracion, peli_estado, peli_imagen) VALUES 
+            (:nom, :desc, :gen, :cla, :dur, :est, :img)";
         //now());
         //bind parameters
         $sentencia = $this->con->prepare($sql);
@@ -63,6 +76,8 @@ class PeliculaModel {
             'gen' => $gen,
             'cla' => $cla,
             'dur' => $dur,
+            'est' => $est,
+            'img' => $img,
         ];
         //execute
         $sentencia->execute($data);
@@ -74,10 +89,10 @@ class PeliculaModel {
         return true;
     }
 
-    public function actualizar($nom, $desc, $gen, $cla, $dur) {
+    public function actualizar($nom, $desc, $gen, $cla, $dur, $est) {
         //prepare
         $sql = "UPDATE `pelicula` SET `peli_id`=null,`peli_nombre`=:nom,`peli_descripcion`=:desc," .
-                "`peli_genero`=:gen,`peli_clasificacion_edad`=:cla,`peli_duracion`=:dur";
+                "`peli_genero`=:gen,`peli_clasificacion_edad`=:cla,`peli_duracion`=:dur, `peli_estado`=:est, `peli_imagen`=:img  ";
         //now());
         //bind parameters
         $sentencia = $this->con->prepare($sql);
@@ -88,6 +103,9 @@ class PeliculaModel {
             'gen' => $gen,
             'cla' => $cla,
             'dur' => $dur,
+            'est' => $est,
+            'img' => $img,
+
         ];
         //execute
         $sentencia->execute($data);
