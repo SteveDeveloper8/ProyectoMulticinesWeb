@@ -52,13 +52,12 @@ class SesionController
             echo $e;
         }
 
-        
-       
-
-        if($usuario->password_usuario == $cont){
+        if(($usuario->password_usuario) == $cont){
             session_start();
             $_SESSION["nombre"] = $usuario->nombre_usuario;
             header('Location: ../homeView.php');
+        }else{
+            echo 'prueba';
         }
     }
 

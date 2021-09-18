@@ -76,7 +76,11 @@ class SesionModel {
       $sentencia = $this->con->prepare($sql);
       //binding parameters
       //execute
-      $sentencia->execute();
+
+      $data = [
+        'email' => $email,
+      ];
+      $sentencia->execute($data);
       //retornar resultados
       $resultado = $sentencia->fetch(PDO::FETCH_OBJ);
       
