@@ -18,6 +18,38 @@ header .header-principal {
   height: 18%;
   width: 100%;
 }
+#nuevo{
+  background-color:#0069d9;
+  color:#fff;
+  padding: 5px 20px;
+  border-radius: 8px;
+}
+
+#botonNuevo{
+  display: flex;
+
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.botones{
+  width: 40%;
+
+}
+
+#buscar{
+  background-color:#0069d9;
+  color:#fff;
+  padding: 5px 20px;
+  border-radius: 8px;
+}
+
+#btn-guarda{
+  width: 100px;
+}
+
+#btn-cancela{
+  width: 100px;
+}
 
 .redes i {
   color: #fff;

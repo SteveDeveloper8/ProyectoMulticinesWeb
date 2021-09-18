@@ -31,6 +31,8 @@ function Prev(){
 }
 
 
+
+
 btnRight.addEventListener('click',function(){
   Next();
 });

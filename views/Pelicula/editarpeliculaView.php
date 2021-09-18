@@ -4,6 +4,7 @@
 <div class="container" style="margin-top: 200px;">
     <div class="card card-body">
         <form action="index.php?c=Pelicula&a=editar" method="POST" name="formPeliNuevo" id="formPeliNuevo">
+        <h1 style="text-align:center;"><b>Editar Pelicula<b></h1>
             <input type="hidden" name="id" id="id" value="<?php echo $peli['peli_id']; ?>"/>
             <div class="form-row">
                 
@@ -29,17 +30,18 @@
                     <label for="descripcion">duracion</label>
                     <input type="text" name="duracion" id="duracion" value="<?php echo $peli['peli_duracion'] ;?>"  class="form-control" placeholder="duracion" required>
                 </div>  
-                <div class="form-group col-sm-12">
-                    <input type="checkbox" id="estado" name="estado" value="<?php echo $peli['peli_estado'] ;?>" <?php echo ($peli['peli_estado'] == 1)?'checked="checked"':''; ?>>
-                    <label for="estado">Activo</label>
-                </div>
+        
                 <div class="form-group col-sm-6">
                     <label for="descripcion">imagen</label>
                     <input type="text" name="imagen" id="imagen" value="<?php echo $peli['peli_imagen'] ;?>" class="form-control" placeholder="imagen" required>
                 </div> 
-                <div class="form-group mx-auto">
-                    <button type="submit" class="btn btn-primary" onclick="if (!confirm('Esta seguro de modificar el productos')) return false;" >Guardar</button>
-                    <a href="index.php?c=pelicula&a=index" class="btn btn-primary">Cancelar</a>
+                <div class="form-group col-sm-6">
+                    <button type="submit" id="btn-guarda" class="btn btn-primary" onclick="if (!confirm('Esta seguro de modificar el productos')) return false;" >Guardar</button>
+                    <a href="index.php?c=pelicula&a=index" id="btn-cancela" class="btn btn-primary">Cancelar</a>
+                </div>
+                <div class="form-group col-sm-6">
+                    <input type="checkbox" id="estado" name="estado" value="<?php echo $peli['peli_estado'] ;?>" <?php echo ($peli['peli_estado'] == 1)?'checked="checked"':''; ?>>
+                    <label for="estado">Activo</label>
                 </div>
                     
             </div>  

@@ -1,4 +1,4 @@
-<?php require_once 'partials/encabezado.php'; ?>
+<?php require_once '../controllers/HomeController.php'; ?>
 
     <!-- TODO: slider start -->
     <div class="container-slider">

@@ -27,6 +27,7 @@ class SesionController
         $exito = $this->model->insertar($nom, $ape, $ced, $email, $cont, $telf, $dom, $fecha);
        
         $msj = 'usuario guardado exitosamente';
+      
         $color = 'primary';
         if (!$exito) {
             $msj = "No se pudo realizar el guardado";
@@ -39,6 +40,30 @@ class SesionController
         //llamar a la vista
         header('Location:index.php?c=homeView&a=index');
     }
+    
+
+    public function autenticar(){
+        $email = htmlentities($_POST['user']);
+        $cont = htmlentities($_POST['pass']);
+
+        try{
+            $usuario = $this->model->Consultar($email);
+        }catch(Exception $e){
+            echo $e;
+        }
+
+        
+       
+
+        if($usuario->password_usuario == $cont){
+            session_start();
+            $_SESSION["nombre"] = $usuario->nombre_usuario;
+            header('Location: ../homeView.php');
+        }
+    }
+
+   
+
 
     
 }

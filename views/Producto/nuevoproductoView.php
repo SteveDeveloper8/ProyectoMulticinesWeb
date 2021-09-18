@@ -2,6 +2,7 @@
 
 <div class="container" style= "margin-top:200px;">
     <div class="card card-body">
+    <h1 style="text-align:center;"><b>Agregar Producto<b></h1>
         <form action="index.php?c=Snack&a=agregar" method="POST" name="formProductoNuevo" id="formProductoNuevo">
             <div class="form-row">
                 
@@ -30,14 +31,16 @@
                     <label for="descripcion">precio</label>
                     <input type="number" name="precio" id="precio" class="form-control" placeholder="precio" required>
                 </div>  
-                <div class="form-group col-sm-12">
-                    <input type="checkbox" id="estado" name="estado" >
-                    <label for="estado">Activo</label>
-                </div>
+              
                 
-                <div class="form-group mx-auto">
+                <div class="form-group col-sm-6">
                     <button type="submit" class="btn btn-primary">Guardar</button>
                     <a href="index.php?c=snack&a=agregar" class="btn btn-primary">Cancelar</a>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <input type="checkbox" id="estado" name="estado" >
+                    <label for="estado">Activo</label>
                 </div>
             </div>  
         </form>

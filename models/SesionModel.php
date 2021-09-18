@@ -29,12 +29,13 @@ class SesionModel {
         ];
         //execute
         $sentencia->execute($data);
-        
+
         //retornar resultados, 
         if ($sentencia->rowCount() <= 0) {// verificar si se inserto 
             //rowCount permite obtner el numero de filas afectadas
             return false;
         }
+        
         return true;
     }
 
@@ -68,4 +69,18 @@ class SesionModel {
         }
         return true;
     }
+
+    public function Consultar($email){
+        //prepare
+      $sql="select * from usuarios where correo_usuario= :email";
+      $sentencia = $this->con->prepare($sql);
+      //binding parameters
+      //execute
+      $sentencia->execute();
+      //retornar resultados
+      $resultado = $sentencia->fetch(PDO::FETCH_OBJ);
+      
+     return $resultado;
+      
+   }
 }

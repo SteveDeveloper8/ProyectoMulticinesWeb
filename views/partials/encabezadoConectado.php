@@ -68,8 +68,7 @@
           </a>
         </div>
         <div class="header-Botones">
-          <a id="registro" href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=registrate&a=estaticas">Registrate</a>
-          <a id="inicioSesion" href="http://localhost/ProyectoMulticinesWeb/index.php?c=sesion&a=entrar">Iniciar Sesión</a>
+          <h3><?php echo Bienvenido .$_SESSION["nombre"]?></h3>
         </div>
       </div>
       <div class="header-principal">
