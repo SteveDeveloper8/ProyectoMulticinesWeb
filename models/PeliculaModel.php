@@ -12,7 +12,7 @@ class PeliculaModel {
     }
     public function consultar(){
         //prepare
-      $sql="select * from pelicula";
+      $sql="select * from pelicula inner join genero on gen_id=peli_id_genero where peli_estado=1";
       $sentencia = $this->con->prepare($sql);
       //binding parameters
       //execute
@@ -25,7 +25,7 @@ class PeliculaModel {
   }
 
     public function listar() { // listar todos los productos
-        $sql = "select * from pelicula";
+        $sql = "select * from pelicula inner join genero on gen_id=peli_id_genero where peli_estado=1";
         // preparar la sentencia
         $stmt = $this->con->prepare($sql);
         // ejecutar la sentencia
@@ -37,7 +37,7 @@ class PeliculaModel {
     }
 
     public function buscarxId($id) { // listar todos los productos
-        $sql = "select * from pelicula";
+        $sql = "select * from pelicula inner join genero on gen_id=peli_id_genero where peli_id=:id and peli_estado=1";
         // preparar la sentencia
         $stmt = $this->con->prepare($sql);
         $data = ['id' => $id];
@@ -50,7 +50,7 @@ class PeliculaModel {
     }
 
     public function buscar($parametro) {
-       $sql = "SELECT * FROM pelicula";
+       $sql = "SELECT * FROM pelicula inner join genero on gen_id=peli_id_genero where peli_estado=1";
         $stmt = $this->con->prepare($sql);
         // preparar la sentencia
         $conlike = '%' . $parametro . '%';
@@ -62,10 +62,10 @@ class PeliculaModel {
         return $resultados;
     }
 
-    public function insertar($nom, $desc, $gen, $cla, $dur, $est) {
+    public function insertar($nom, $desc, $gen, $cla, $dur, $est,$img) {
         //prepare
-        $sql = "INSERT INTO pelicula(peli_nombre, peli_descripcion, peli_genero, peli_clasificacion_edad, peli_duracion, peli_estado, peli_imagen) VALUES 
-            (:nom, :desc, :gen, :cla, :dur, :est, :img)";
+        $sql = "INSERT INTO pelicula(peli_nombre, peli_descripcion, peli_id_genero, peli_clasificacion_edad, peli_duracion, peli_estado, peli_imagen) VALUES 
+            (:nom, :desc, :gen , :cla, :dur, :est, :img)";
         //now());
         //bind parameters
         $sentencia = $this->con->prepare($sql);
@@ -89,10 +89,11 @@ class PeliculaModel {
         return true;
     }
 
-    public function actualizar($nom, $desc, $gen, $cla, $dur, $est) {
-        //prepare
-        $sql = "UPDATE `pelicula` SET `peli_id`=null,`peli_nombre`=:nom,`peli_descripcion`=:desc," .
-                "`peli_genero`=:gen,`peli_clasificacion_edad`=:cla,`peli_duracion`=:dur, `peli_estado`=:est, `peli_imagen`=:img  ";
+    public function actualizar($nom, $desc, $gen, $cla, $dur, $est, $img) {
+        $sql = "UPDATE pelicula SET peli_descripcion=:desc," .
+                "peli_id_genero=:gen,peli_clasificacion_edad=:cla,peli_duracion=:dur,
+                 peli_estado=:est, peli_imagen=:img  where peli_nombre=:nom; ";
+        
         //now());
         //bind parameters
         $sentencia = $this->con->prepare($sql);
@@ -117,18 +118,14 @@ class PeliculaModel {
         return true;
     }
 
-    public function eliminar($id, $usu) {
+    public function eliminar($id) {
         //prepare
-        $sql = "UPDATE `pelicula` SET `prod_estado`=0,`prod_usuarioActualizacion`=:usu," .
-                "`prod_fechaActualizacion`=:fecha WHERE prod_id=:id";
+        $sql = "UPDATE `pelicula` SET `peli_estado`=0 WHERE peli_id=:id";
         //now());
         //bind parameters
         $sentencia = $this->con->prepare($sql);
-        $fechaActual = new DateTime('NOW');
-        $strfecha = $fechaActual->format('Y-m-d H:i:s');
+        
         $data = [
-            'usu' => $usu,
-            'fecha' => $strfecha,
             'id' => $id
         ];
         //execute

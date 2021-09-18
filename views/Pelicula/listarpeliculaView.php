@@ -34,12 +34,12 @@
                 <tr>
                     <td><?php echo $fila['peli_nombre'];?></td>
                     <td><?php echo $fila['peli_descripcion'];?></td>
-                    <td><?php echo $fila['peli_genero'];?></td>
+                    <td><?php echo $fila['gen_descripcion'];?></td>
                     <td><?php echo $fila['peli_clasificacion_edad'];?></td>
                     <td><?php echo $fila['peli_duracion'];?></td>
                     <td><?php echo $fila['peli_estado'];?></td>
                     <td><?php echo $fila['peli_imagen'];?></td>
-                    <td><a class="btn btn-primary" href=""><i class="fas fa-marker"></i></a>
+                    <td><a class="btn btn-primary" href="index.php?c=pelicula&a=vistaEditar&id=<?php echo  $fila['peli_id']; ?>">><i class="fas fa-marker"></i></a>
                         <a class="btn btn-danger" onclick="if(!confirm('Esta seguro de eliminar la pelicula?'))return false;"  href="index.php?c=pelicula&a=eliminar&id=<?php echo  $fila['peli_id']; ?>"><i class="fas fa-trash-alt"></i></a>
                     </td>
                 </tr>

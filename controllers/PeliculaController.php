@@ -75,7 +75,7 @@ class PeliculaController {
           // leer parametros
         $id = htmlentities($_GET['id']);
 
-        $exito = $this->model->eliminar($id, $usu);
+        $exito = $this->model->eliminar($id);
         $msj = 'Pelicula eliminado exitosamente';
         $color = 'primary';
         if (!$exito) {
@@ -104,20 +104,24 @@ class PeliculaController {
         require_once 'views/Pelicula/editarpeliculaView.php';
         
     }
-    
-      public function editar() {
+    public function vistaEditar(){
+        $id = htmlentities($_GET['id']);
+        $peli=$this->model->buscarxId($id);
+        
+        require_once 'views/Pelicula/editarpeliculaView.php';
+    }
+    public function editar() {
         // leer parametros
-
         $nom = htmlentities($_POST['nombre']);
         $desc = htmlentities($_POST['descripcion']);
-        $precio = htmlentities($_POST['precio']);
-        $idCat = htmlentities($_POST['categoria']);
-        $estado = (isset($_POST['estado'])) ? 1 : 0;
-        $usu = 'usuario'; //$_SESSION['usuario'];
-        //if(!isset($_POST['codigo'])){ header('');}
+        $gen = htmlentities($_POST['genero']);
+        $cla = htmlentities($_POST['clasificacion_edad']);
+        $dur = htmlentities($_POST['duracion']);
+        $est = (isset($_POST['estado'])) ? 1 : 0;
+        $img = htmlentities($_POST['imagen']);
         
         //llamar al modelo
-        $exito = $this->model->actualizar($cod, $nom, $desc, $estado, $precio, $idCat, $usu,$id);
+        $exito = $this->model->actualizar($nom, $desc, $gen, $cla, $dur, $est, $img);
         $msj = 'Pelicula actualizado exitosamente';
         $color = 'primary';
         if (!$exito) {

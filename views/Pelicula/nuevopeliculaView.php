@@ -1,6 +1,6 @@
 <?php require_once 'views/partials/encabezado.php'; ?>
 
-<div class="container">
+<div class="container" style= "margin-top:200px;">
     <div class="card card-body">
         <form action="index.php?c=Pelicula&a=agregar" method="POST" name="formPeliNuevo" id="formPeliNuevo">
             <div class="form-row">
@@ -20,7 +20,7 @@
                 </div>     
                 <div class="form-group col-sm-6">
                     <label for="descripcion">clasificacion por edad</label>
-                    <input type="text" name="clasifiacion_edad" id="clasifiacion_edad" class="form-control" placeholder="clasifiacion_edad" required>
+                    <input type="text" name="clasificacion_edad" id="clasificacion_edad" class="form-control" placeholder="clasifiacion_edad" required>
                 </div>  
                 <div class="form-group col-sm-6">
                     <label for="descripcion">duracion</label>
@@ -36,7 +36,7 @@
                 </div> 
                 <div class="form-group mx-auto">
                     <button type="submit" class="btn btn-primary">Guardar</button>
-                    <a href="index.php?c=pelicula&a=index" class="btn btn-primary">Cancelar</a>
+                    <a href="index.php?c=pelicula&a=agregar" class="btn btn-primary">Cancelar</a>
                 </div>
             </div>  
         </form>

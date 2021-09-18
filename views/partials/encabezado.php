@@ -89,8 +89,12 @@
             <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=QuienesSomos&a=estaticas">Quienes somos</a></li>
             <!-- TODO: Lopez -->
             <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=contactenos&a=estaticas">Contáctanos</a></li>
-            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=listarpeliculaView&a=pelicula">Lista Peliculas</a></li>
-            <!-- TODO: Martinez -->
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=pelicula&a=index">Lista Peliculas</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=pelicula&a=nuevo">Agregar Peliculas</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=pelicula&a=index">Editar Peliculas</a></li> -->           <!-- TODO: Martinez -->
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=snack&a=index">Lista Producto</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=snack&a=nuevo">Agregar Producto</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=snack&a=index">Editar Producto</a></li>  -->
             <!-- TODO: Delgado Registro ** Trabaja con nosotros-->
           </ul>
         </nav>
