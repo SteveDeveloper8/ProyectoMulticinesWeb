@@ -114,7 +114,7 @@ class SnackController {
         // leer parametros
         $nom = htmlentities($_POST['nombre']);
         $desc = htmlentities($_POST['descripcion']);
-        $desc = htmlentities($_POST['tipo']);
+        $tip = htmlentities($_POST['tipo']);
         $cla = htmlentities($_POST['clasificacion']);
         $img = htmlentities($_POST['imagen']);
         $pre = htmlentities($_POST['precio']);

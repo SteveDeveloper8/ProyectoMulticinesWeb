@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group col-sm-6">
                     <label for="descripcion">genero</label>
-                    <input type="text" name="genero" id="genero" value="<?php echo $peli['peli_genero'] ;?>"  class="form-control" placeholder="genero" required>
+                    <input type="text" name="genero" id="genero" value="<?php echo $peli['peli_id_genero'] ;?>"  class="form-control" placeholder="genero" required>
                 </div>     
                 <div class="form-group col-sm-6">
                     <label for="descripcion">clasificacion por edad</label>
