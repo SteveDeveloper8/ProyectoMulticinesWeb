@@ -1,4 +1,4 @@
-<?php require_once 'views/partials/encabezado.php'; ?>
+<?php require_once 'views/partials/encabezadoAdmin.php';  ?>
 
 <div class="container" style= "margin-top:150px;">
   

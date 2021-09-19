@@ -1,4 +1,11 @@
-<?php require_once 'partials/encabezado.php'; ?>
+
+<?php
+if($_SESSION["rol"]=='Administrador') 
+require_once 'partials/encabezadoAdmin.php'; 
+
+else
+require_once 'partials/encabezado.php'; 
+?>
 
     <!-- TODO: slider start -->
     <div class="container-slider">

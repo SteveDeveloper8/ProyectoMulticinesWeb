@@ -16,6 +16,7 @@
       name="description"
       content="Aplicacion de cine,proyecto segundo parcial, sexto semestre"
     />
+    
     <link rel="stylesheet" href="http://localhost/ProyectoMulticinesWeb/assets/css/estilos.css" />
     <script src="http://localhost/ProyectoMulticinesWeb/assets/js/Quienes.js"></script>
     <script src="http://localhost/ProyectoMulticinesWeb/assets/js/Cartelera.js"></script>
@@ -79,18 +80,10 @@
         <nav class="navegacion">
           <ul>
             <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&a=index">Inicio</a></li>
-            <!-- TODO: Asanza -->
-            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=Cartelera&a=estaticas">Cartelera</a></li>
-            <!-- TODO: Lopez -->
-            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=Snackbar&a=estaticas">Snackbar</a></li>
-            <!-- TODO: Asanza -->
-            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=promociones&a=estaticas">Promociones</a></li>
-            <!-- TODO: Martinez -->
-            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=QuienesSomos&a=estaticas">Quienes somos</a></li>
-            <!-- TODO: Lopez -->
-            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=contactenos&a=estaticas">Contáctanos</a></li>
-
-           
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=pelicula&a=index">Lista Peliculas</a></li>
+         <!-- TODO: Martinez -->
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=snack&a=index">Lista Producto</a></li>
+            
           </ul>
         </nav>
       </div>

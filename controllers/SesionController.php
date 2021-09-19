@@ -36,9 +36,9 @@ class SesionController
         session_start();
         $_SESSION['mensaje'] = $msj;
         $_SESSION['color'] = $color;
-
+        $_SESSION['rol']='Cliente'; 
         //llamar a la vista
-        header('Location:index.php?c=homeView&a=index');
+        header('Location:index.php?c=index&a=index');
     }
     
 
@@ -51,13 +51,16 @@ class SesionController
         }catch(Exception $e){
             echo $e;
         }
-        if(isset($usuario['password_usuario'])){
-            if($usuario['password_usuario'] == $cont){
-                session_start();
+        session_start();
+        if($usuario->password_usuario !=null){
+            if($usuario->password_usuario == $cont){
+                
                 $_SESSION["nombre"] = $usuario->nombre_usuario;
-                header('Location: ../homeView.php');
+                $_SESSION["rol"] = $usuario->rol_usuario;
+                header('Location:index.php?c=index&a=index');
             }else{
-                echo 'prueba';
+                $_SESSION["error"] = "Contraseña incorrecta.";
+            require_once 'views/login/login.php';
             }
 
         }else{
