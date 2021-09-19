@@ -61,7 +61,17 @@ class PeliculaModel {
         $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $resultados;
     }
-
+    public function consultarGeneros() { // listar todos los productos
+        $sql = "select * from genero";
+        // preparar la sentencia
+        $stmt = $this->con->prepare($sql);
+        // ejecutar la sentencia
+        $stmt->execute();
+        // recuperar los datos (en caso de select)
+        $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // retornar resultados
+        return $resultados;
+    }
     public function insertar($nom, $desc, $gen, $cla, $dur, $est,$img) {
         //prepare
         $sql = "INSERT INTO pelicula(peli_nombre, peli_descripcion, peli_id_genero, peli_clasificacion_edad, peli_duracion, peli_estado, peli_imagen) VALUES 
@@ -77,7 +87,7 @@ class PeliculaModel {
             'cla' => $cla,
             'dur' => $dur,
             'est' => $est,
-            'img' => $img,
+            'img' => $img
         ];
         //execute
         $sentencia->execute($data);

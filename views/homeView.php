@@ -1,4 +1,4 @@
-<?php require_once '../controllers/HomeController.php'; ?>
+<?php require_once 'partials/encabezado.php'; ?>
 
     <!-- TODO: slider start -->
     <div class="container-slider">
@@ -34,12 +34,14 @@
       <div class="carteleraEstreno">
         <h1>Estrenos / Carterlera</h1>
         <div class="peliculas">
-          <div class="peliculaDiv" id="pelicula1">
-            <div class="peli">
-              <img src="http://localhost/ProyectoMulticinesWeb/assets/img/pelicula1.jpg" alt="Pelicula" />
+        <?php foreach ($resultados as $fila) { ?>
+            <div class="peliculaDiv" id="<?php echo $fila['peli_id'];?>">
+              <div class="peli">
+                <img src="<?php echo $fila['peli_imagen'];?>" alt="Pelicula" />
+              </div>
+              <a class="btn-comprar">Comprar</a>
             </div>
-            <a class="btn-comprar">Comprar</a>
-          </div>
+            <?php  }?>
           <div class="peliculaDiv" id="pelicula2">
             <div class="peli">
               <img src="http://localhost/ProyectoMulticinesWeb/assets/img/pelicula2.jpg" alt="Pelicula" />

@@ -36,7 +36,9 @@
                     <td><?php echo $fila['prod_descripcion'];?></td>
                     <td><?php echo $fila['prod_tipo_id'];?></td>
                     <td><?php echo $fila['prod_clasificacion'];?></td>
-                    <td><?php echo $fila['prod_dir_imagen'];?></td>
+                    <td>
+                        <img style="width:100px;height:160px;"src="<?php echo $fila['prod_dir_imagen'];?>" alt="poster">
+                    </td>
                     <td><?php echo $fila['prod_precio'];?></td>
                     <td><?php echo $fila['prod_estado'];?></td>     
                     <td><a class="btn btn-primary" href="index.php?c=snack&a=vistaEditar&id=<?php echo  $fila['prod_id']; ?>"><i class="fas fa-marker"></i></a>

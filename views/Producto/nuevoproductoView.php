@@ -3,7 +3,7 @@
 <div class="container" style= "margin-top:200px;">
     <div class="card card-body">
     <h1 style="text-align:center;"><b>Agregar Producto<b></h1>
-        <form action="index.php?c=Snack&a=agregar" method="POST" name="formProductoNuevo" id="formProductoNuevo">
+        <form enctype="multipart/form-data" action="index.php?c=Snack&a=agregar" method="POST" name="formProductoNuevo" id="formProductoNuevo">
             <div class="form-row">
                 
                 <div class="form-group col-sm-6">
@@ -16,20 +16,22 @@
                     <textarea id="descripcion"  name="descripcion" class="form-control" rows="2"></textarea>
                 </div>
                 <div class="form-group col-sm-6">
-                    <label for="descripcion">Tipo</label>
-                    <input type="text" name="tipo" id="tipo" class="form-control" placeholder="tipo" required>
+                <label for="tipo">Tipo</label>
+                    <select class="form-control" name="tipo" id="tipo" onfocus="llenarTipos();">
+                    <option  selected="true" value="0">Seleccione..</option>
+                    </select>
                 </div>    
                 <div class="form-group col-sm-6">
                     <label for="descripcion">Clasificacion</label>
                     <input type="text" name="clasificacion" id="clasificacion" class="form-control" placeholder="clasificacion" required>
                 </div>     
                 <div class="form-group col-sm-6">
-                    <label for="descripcion">Imagen</label>
-                    <input type="text" name="imagen" id="imagen" class="form-control" placeholder="imagen" required>
+                    <label for="imagen">Imagen</label>
+                    <input type="file" name="image" id="image"  class="form-control">
                 </div>  
                 <div class="form-group col-sm-6">
                     <label for="descripcion">precio</label>
-                    <input type="number" name="precio" id="precio" class="form-control" placeholder="precio" required>
+                    <input type="number" step="0.01" name="precio" id="precio" class="form-control" placeholder="precio" required>
                 </div>  
               
                 

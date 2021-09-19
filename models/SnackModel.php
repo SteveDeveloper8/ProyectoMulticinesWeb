@@ -23,7 +23,29 @@ class SnackModel {
      return $resultados;
       
   }
-
+  public function consultarTipos() { // listar todos los productos
+    $sql = "select * from tipo";
+    // preparar la sentencia
+    $stmt = $this->con->prepare($sql);
+    // ejecutar la sentencia
+    $stmt->execute();
+    // recuperar los datos (en caso de select)
+    $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // retornar resultados
+    return $resultados;
+}
+    public function consultarProdxTipos($tipo){
+        $sql = "select * from snack inner join tipo on tipo_id=prod_tipo_id where prod_estado=1 AND tipo_id= :tipo";
+        // preparar la sentencia
+        $stmt = $this->con->prepare($sql);
+        // ejecutar la sentencia
+        $data = ['tipo' => $tipo];
+        $stmt->execute($data);
+        // recuperar los datos (en caso de select)
+        $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // retornar resultados
+        return $resultados;
+    }
     public function listar() { // listar todos los productos
         $sql = "select * from snack inner join tipo on tipo_id=prod_tipo_id where prod_estado=1";
         // preparar la sentencia

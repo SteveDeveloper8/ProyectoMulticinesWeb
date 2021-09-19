@@ -24,7 +24,9 @@ header .header-principal {
   padding: 5px 20px;
   border-radius: 8px;
 }
-
+.bar-menu div:first-child{
+  background-Color:rgb(207, 27, 111);
+}
 #botonNuevo{
   display: flex;
 

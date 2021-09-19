@@ -10,7 +10,7 @@
                     <button type="submit" id="buscar"><i class="fas fa-search"></i>    Buscar</button>
             </form>
             <a href="index.php?c=pelicula&a=nuevo"> 
-                <button type="button" id="nuevo"><i class="fas fa-plus"></i>    `Nuevo</button>
+                <button type="button" id="nuevo"><i class="fas fa-plus"></i> Nuevo</button>
             </a>
         </div>
         <table class="table table-striped table-bordered">
@@ -36,7 +36,9 @@
                     <td><?php echo $fila['peli_clasificacion_edad'];?></td>
                     <td><?php echo $fila['peli_duracion'];?></td>
                     <td><?php echo $fila['peli_estado'];?></td>
-                    <td><?php echo $fila['peli_imagen'];?></td>
+                    <td>
+                        <img style="width:100px;height:160px;"src="<?php echo $fila['peli_imagen'];?>" alt="poster">
+                    </td>
                     <td><a class="btn btn-primary" id="btn-editar" href="index.php?c=pelicula&a=vistaEditar&id=<?php echo  $fila['peli_id']; ?>"><i class="fas fa-marker"></i></a>
                         <a class="btn btn-danger"  onclick="if(!confirm('Esta seguro de eliminar la pelicula?'))return false;"  href="index.php?c=pelicula&a=eliminar&id=<?php echo  $fila['peli_id']; ?>"><i class="fas fa-trash-alt"></i></a>
                     </td>

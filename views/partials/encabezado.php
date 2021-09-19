@@ -26,6 +26,7 @@
     <script src="http://localhost/ProyectoMulticinesWeb/assets/js/validaciones.js"></script>
     <script src="http://localhost/ProyectoMulticinesWeb/assets/js/validacionesTCN.js"></script>
     <script src="http://localhost/ProyectoMulticinesWeb/assets/js/ValidarFormulario.js"></script>
+    <script src="http://localhost/ProyectoMulticinesWeb/assets/js/peticionesAsincronas.js"></script>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
     <script
@@ -78,7 +79,7 @@
         </div>
         <nav class="navegacion">
           <ul>
-            <li><a href="http://localhost/ProyectoMulticinesWeb/views/homeView.php">Inicio</a></li>
+            <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&a=index">Inicio</a></li>
             <!-- TODO: Asanza -->
             <li><a href="http://localhost/ProyectoMulticinesWeb/index.php?c=index&p=Cartelera&a=estaticas">Cartelera</a></li>
             <!-- TODO: Lopez -->

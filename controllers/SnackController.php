@@ -48,7 +48,7 @@ class SnackController {
         $desc = htmlentities($_POST['descripcion']);
         $tip = htmlentities($_POST['tipo']);
         $cla = htmlentities($_POST['clasificacion']);
-        $img = htmlentities($_POST['imagen']);
+        $img = $this->agregarArchivo();
         $pre = htmlentities($_POST['precio']);
         $est = (isset($_POST['estado'])) ? 1 : 0;
         
@@ -68,7 +68,21 @@ class SnackController {
         //llamar a la vista
         header('Location:index.php?c=Snack&a=index');
     }
-
+    private function agregarArchivo(){
+        $directorio = "archivos/";
+        $rutaUniversal="http://localhost/ProyectoMulticinesWeb/";
+        $archivo = $directorio . basename($_FILES['image']['name']);
+        $tipo_archivo = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
+            if($tipo_archivo == "jpg" || $tipo_archivo == "png" || $tipo_archivo == "jpeg"){
+                if(move_uploaded_file($_FILES["image"]["tmp_name"], $archivo)){
+                        return $rutaUniversal.$archivo;
+                }else{
+                    return  false;
+                }
+            }else{
+                return  false;
+            }
+    }
     
     
     public function eliminar(){
@@ -90,7 +104,15 @@ class SnackController {
         header('Location:index.php?c=Snack&a=index'); // redireccionamiento, causa un cambio en la url
         
     }
-    
+    public function listarProdxTipo(){
+        $tipo = htmlentities($_GET['p']);
+        $productos = $this->model->consultarProdxTipos($tipo);
+        echo json_encode($productos);
+    }
+    public function listarTipos(){
+        $tipos = $this->model->consultarTipos();
+        echo json_encode($tipos);
+    }
     public function mostrar(){// MUESTRA EL FORMULARIO DE PRODUCTO EXISTENTE PARA SU EDICION
          // llamar al modelo
         require_once 'models/ProductoModel.php';
@@ -116,7 +138,11 @@ class SnackController {
         $desc = htmlentities($_POST['descripcion']);
         $tip = htmlentities($_POST['tipo']);
         $cla = htmlentities($_POST['clasificacion']);
+        if(isset($_FILES['image']['name']))
+        $img = $this->agregarArchivo();
+        else
         $img = htmlentities($_POST['imagen']);
+
         $pre = htmlentities($_POST['precio']);
         $est = (isset($_POST['estado'])) ? 1 : 0;
         

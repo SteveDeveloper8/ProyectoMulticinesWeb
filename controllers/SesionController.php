@@ -51,14 +51,20 @@ class SesionController
         }catch(Exception $e){
             echo $e;
         }
+        if(isset($usuario['password_usuario'])){
+            if($usuario['password_usuario'] == $cont){
+                session_start();
+                $_SESSION["nombre"] = $usuario->nombre_usuario;
+                header('Location: ../homeView.php');
+            }else{
+                echo 'prueba';
+            }
 
-        if(($usuario->password_usuario) == $cont){
-            session_start();
-            $_SESSION["nombre"] = $usuario->nombre_usuario;
-            header('Location: ../homeView.php');
         }else{
-            echo 'prueba';
+            $_SESSION["error"] = "No existe un usuraio registrado con ese nombre.";
+            require_once 'views/login/login.php';
         }
+        
     }
 
    
